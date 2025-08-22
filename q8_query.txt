@@ -1,0 +1,1 @@
+EJSON.stringify(db.sales.aggregate([{$unwind:"$items"},{$unwind:{path:"$items.tags",preserveNullAndEmptyArrays:true}},{$match:{"items.tags":{$ne:null}}},{$group:{_id:null,tags:{$addToSet:"$items.tags"}}},{$project:{_id:0,tags:{$sortArray:{input:"$tags",sortBy:1}}}}]).next().tags, null, 0)

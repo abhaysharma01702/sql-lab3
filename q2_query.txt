@@ -1,0 +1,1 @@
+EJSON.stringify(db.sales_work.aggregate([{$match:{orderId:"LAB_2025201014"}},{$project:{_id:0,orderId:1,storeLocation:1,purchaseMethod:1,item0:{$arrayElemAt:["$items.name",0]}}}]).next(), null, 0)

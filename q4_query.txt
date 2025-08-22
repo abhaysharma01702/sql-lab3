@@ -1,0 +1,1 @@
+EJSON.stringify(db.sales_work.deleteOne({orderId:"LAB_2025201014"}), null, 0)

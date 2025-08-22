@@ -1,0 +1,1 @@
+EJSON.stringify(db.sales_work.updateOne({orderId:"LAB_2025201014"},{$inc:{"items.0.quantity":2},$set:{"customer.satisfaction":5}}), null, 0)
